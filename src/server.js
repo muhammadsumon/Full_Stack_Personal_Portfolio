@@ -43,7 +43,7 @@ app.use(function (req, res, next) {
 });
 
 const corsOptions = {
-    origin: ["https://localhost:3001", "https://localhost:3000"],
+    origin: true,
     credentials: true,
     optionSuccessStatus: 200,
     exposedHeaders: '*'
