@@ -1,3 +1,4 @@
+/Back End
 /Back End/node_modules
 /Back End/build
 /Back End/.env
@@ -8,5 +9,6 @@
 /Front End/build
 /Front End/.env
 
+/Rest Api
 /Rest Api/node_modules
 /Rest Api/.env
