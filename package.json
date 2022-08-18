@@ -2,6 +2,9 @@
   "name": "@ms-portfolio/dashboard",
   "author": "MuhammadSumon",
   "version": "3.3.0",
+  "engines": {
+    "node": "18.x"
+  },
   "private": true,
   "scripts": {
     "start": "react-app-rewired start",
