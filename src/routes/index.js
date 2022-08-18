@@ -68,7 +68,7 @@ export default function Router() {
         </AuthGuard>
       ),
       children: [
-        { element: <Navigate to="/dashboard/analytics" replace /> },
+        { element: <Navigate to="/dashboard/analytics" replace />, index: true },
         { path: 'analytics', element: <GeneralAnalytics /> },
         {
           path: 'project',
