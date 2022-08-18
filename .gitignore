@@ -1,6 +1,6 @@
-/Front End/src/Components/Sections/CompletedProjects.old.jsx
-/Front End/src/Components/Sections/ContactWithMe.Old.jsx
-/Front End/node_modules
-/Front End/build
-/Front End/.env
+/src/Components/Sections/CompletedProjects.old.jsx
+/src/Components/Sections/ContactWithMe.Old.jsx
+/node_modules
+/build
+/.env
 /.vscode
