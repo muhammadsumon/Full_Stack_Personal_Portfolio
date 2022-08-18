@@ -1,7 +1,6 @@
 {
   "name": "@ms-portfolio/dashboard",
   "author": "MuhammadSumon",
-  "homepage": ".",
   "version": "3.3.0",
   "private": true,
   "scripts": {
@@ -144,9 +143,5 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "prettier": "^2.5.1",
     "typescript": "^4.5.5"
-  },
-  "browser": {
-    "crypto": false,
-    "stream": false
   }
 }
