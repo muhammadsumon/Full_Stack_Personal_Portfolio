@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Nunito:wght@400;500;600;700&family=Mulish:wght@400;500;600;700&display=swap");
+
+@layer base {
+  body {
+    font-family: "Nunito", sans-serif !important;
+    scroll-behavior: smooth;
+    @apply mdMax:overflow-x-hidden;
+  }
+  .overYHidden {
+    overflow: hidden !important;
+  }
+  button:focus {
+    outline: none !important;
+  }
+}
+
+.fWohKN {
+  font-size: 18px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 30px;
+  border-radius: 49%;
+  border: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.4s opacity ease;
+  transition: 0.4s opacity ease;
+  cursor: pointer;
+  outline: none;
+  background: white;
+  border: 1px solid #00000038;
+  padding: 10px;
+  color: #000000a3;
+}
+
+/* -------------- */
+/* Highlith Text  */
+/* -------------- */
+
+.ms-hightlight {
+  position: relative;
+}
+
+.ms-hightlight-line::before {
+  content: "";
+  width: 103%;
+  height: 38%;
+  z-index: -1;
+  left: -8px;
+  bottom: 5px;
+  position: absolute;
+  @apply bg-green-50;
+  transition: all 0.4s;
+}
+.ms-hightlight-h-full::before {
+  content: "";
+  width: 30%;
+  height: 100%;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  @apply bg-green-50;
+  transition: all 0.4s;
+}
+.ms-hightlight-1::before {
+  content: "";
+  width: 19px;
+  height: 19px;
+  z-index: -1;
+  left: -8px;
+  bottom: 0;
+  position: absolute;
+  @apply rounded-full bg-green-100;
+  transition: all 0.4s;
+}
+
+.ms-hightlight-2::before {
+  content: "";
+  width: 34px;
+  height: 34px;
+  z-index: -1;
+  left: -8px;
+  bottom: 0;
+  position: absolute;
+  @apply rounded-full bg-green-100;
+  transition: all 0.4s;
+}
+
+.ms-hightlight-3::before {
+  content: "";
+  width: 55px;
+  height: 55px;
+  z-index: -1;
+  left: -8px;
+  bottom: 0;
+  position: absolute;
+  @apply rounded-full bg-green-100;
+  transition: all 0.4s;
+}
+
+.ms-hightlight-4::before {
+  content: "";
+  width: 73px;
+  height: 73px;
+  z-index: -1;
+  left: -8px;
+  bottom: 0;
+  position: absolute;
+  @apply rounded-full bg-green-100;
+  transition: all 0.4s;
+}
