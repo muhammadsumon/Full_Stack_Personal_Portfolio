@@ -1,0 +1,30 @@
+on:
+  push:
+    branches: Frontend
+
+name: 🚀 Deploy Website Frontend on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
+
+      - name: Use Node.js 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+
+      - name: 🔨 Build Project
+        run: |
+          npm install
+          npm run build
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.ftpServer }}
+          username: ${{ secrets.ftp1Username }}
+          password: ${{ secrets.ftpPassword }}
+          local-dir: ./build/
