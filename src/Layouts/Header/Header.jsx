@@ -54,7 +54,7 @@ const Header = () => {
             <div className='logo text-[16px] xsm:text-lg flex flex-col tracking-widest'>
               Muhammad Sumon
               <span className='text-[12px] hidden sm:block py-0 my-0 text-slate-600'>
-                React Js Developer
+                Front End Developer
               </span>
             </div>
 
@@ -119,7 +119,7 @@ const Header = () => {
               >
                 <div className='logo h-[97px] xsm:h-[77px] px-7 pt-6 tracking-widest'>
                   <p className='text-[18px] sm:text-[19px]'>Muhammad Sumon</p>
-                  <span className='text-[12px]'>React Js Developer</span>
+                  <span className='text-[12px]'>Front End Developer</span>
                 </div>
 
                 <div>

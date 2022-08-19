@@ -11,6 +11,7 @@ import CollapsIcon from "../../Assets/Icons/Portfolio/CollapsIcon";
 import DownIcon from "../../Assets/Icons/Portfolio/DownIcon";
 import FilterIcon from "../../Assets/Icons/Portfolio/FilterIcon";
 import ProjectType from "../../Assets/Icons/Portfolio/ProjectType";
+import { React_App_Api_Key, React_App_Api_Url } from "../../config/config";
 import fetcher from "../../Utils/api";
 import InternalServerError from "../InternalServerError";
 import Loading from "../Loading";
@@ -275,41 +276,52 @@ const CompletedProjects = (props) => {
   useEffect(() => {
     dispatch({ type: "setLoading" });
     const initFetch = async () => {
+      const token = {
+        headers: { Authorization: `Bearer ${React_App_Api_Key}` },
+      };
+
       const projectsReq = await fetcher(
-        `${process.env.React_App_Api_Url}/projects`
+        `${React_App_Api_Url}/projects`,
+        token
       ).catch((err) => {
         if (err && err.status !== 200) {
           dispatch({ type: "apiError" });
         }
       });
-      dispatch({ type: "setProjects", projects: projectsReq.data });
+      dispatch({ type: "setProjects", projects: projectsReq?.data });
 
       const typesReq = await fetcher(
-        `${process.env.React_App_Api_Url}/projecttypes`
+        `${React_App_Api_Url}/projecttypes`,
+        token
       ).catch((err) => {
         if (err && err.status !== 200) {
           dispatch({ type: "apiError" });
         }
       });
-      dispatch({ type: "setTypes", types: typesReq.data });
+      dispatch({ type: "setTypes", types: typesReq?.data });
 
       const categoriesReq = await fetcher(
-        `${process.env.React_App_Api_Url}/categories`
+        `${React_App_Api_Url}/categories`,
+        token
       ).catch((err) => {
         if (err && err.status !== 200) {
           dispatch({ type: "apiError" });
         }
       });
-      dispatch({ type: "setCategories", categories: categoriesReq.data });
+      dispatch({ type: "setCategories", categories: categoriesReq?.data });
 
       const technologiesReq = await fetcher(
-        `${process.env.React_App_Api_Url}/technologies`
+        `${React_App_Api_Url}/technologies`,
+        token
       ).catch((err) => {
         if (err && err.status !== 200) {
           dispatch({ type: "apiError" });
         }
       });
-      dispatch({ type: "setTechnologies", technologies: technologiesReq.data });
+      dispatch({
+        type: "setTechnologies",
+        technologies: technologiesReq?.data,
+      });
     };
 
     initFetch();
