@@ -61,19 +61,19 @@ export default function Router() {
 
     // Dashboard Routes
     {
-      path: 'dashboard',
+      path: '',
       element: (
         <AuthGuard>
           <DashboardLayout />
         </AuthGuard>
       ),
       children: [
-        { element: <Navigate to="/dashboard/analytics" replace />, index: true },
+        { element: <Navigate to="/analytics" replace />, index: true },
         { path: 'analytics', element: <GeneralAnalytics /> },
         {
           path: 'project',
           children: [
-            { element: <Navigate to="/dashboard/project/list" replace /> },
+            { element: <Navigate to="/project/list" replace /> },
             { path: 'list', element: <ProjectList /> },
             { path: 'new', element: <ProjectCreate /> },
             { path: ':id/edit', element: <ProjectEdit /> }
@@ -82,7 +82,7 @@ export default function Router() {
         {
           path: 'type',
           children: [
-            { element: <Navigate to="/dashboard/type/list" replace /> },
+            { element: <Navigate to="/type/list" replace /> },
             { path: 'list', element: <TypeList /> },
             { path: 'new', element: <TypeCreate /> },
             { path: ':id/edit', element: <TypeCreate /> }
@@ -91,7 +91,7 @@ export default function Router() {
         {
           path: 'category',
           children: [
-            { element: <Navigate to="/dashboard/category/list" replace /> },
+            { element: <Navigate to="/category/list" replace /> },
             { path: 'list', element: <CategoryList /> },
             { path: 'new', element: <CategoryCreate /> },
             { path: ':id/edit', element: <CategoryCreate /> }
@@ -100,7 +100,7 @@ export default function Router() {
         {
           path: 'technology',
           children: [
-            { element: <Navigate to="/dashboard/technology/list" replace /> },
+            { element: <Navigate to="/technology/list" replace /> },
             { path: 'list', element: <TechnologyList /> },
             { path: 'new', element: <TechnologyCreate /> },
             { path: ':id/edit', element: <TechnologyCreate /> }
@@ -109,7 +109,7 @@ export default function Router() {
         {
           path: 'user',
           children: [
-            { element: <Navigate to="/dashboard/user/list" replace /> },
+            { element: <Navigate to="/user/list" replace /> },
             {
               path: 'list',
               element: (
@@ -145,7 +145,7 @@ export default function Router() {
     },
     {
       path: '/',
-      element: <Navigate to="/dashboard" />
+      element: <Navigate to="/" />
     },
     { path: '*', element: <Navigate to="/404" replace /> }
   ]);
