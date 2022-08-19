@@ -22,7 +22,7 @@ export const auth0Config = {
 };
 
 export const mapConfig = process.env.REACT_APP_MAP_MAPBOX;
-export const apiUrl = process.env.REACT_APP_HOST_API_URL;
+export const apiUrl = "https://api-muhammadsumon.herokuapp.com";
 export const accessToken = getAccessToken();
 
 export const googleAnalyticsConfig = process.env.REACT_APP_GA_MEASUREMENT_ID;
