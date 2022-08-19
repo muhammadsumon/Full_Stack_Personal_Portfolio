@@ -94,12 +94,14 @@ const Header = () => {
 
             {/* CTA & Humberger Btn  */}
             <div className='flex'>
-              <button
+              <AnchorLink
+                href='#contact'
+                offset='96'
                 type='button'
                 className={tw`whitespace-nowrap transition-all duration-300 px-8 py-2 border(none) font(nunito normal) text-white bg-primary rounded focus:( ring-4 ring-green-200 outline-8))`}
               >
                 Hire Me
-              </button>
+              </AnchorLink>
               <button
                 onClick={(e) => handleMobileMenuOpen()}
                 className={tw`block ml-4 lg:hidden transition-all duration-300 p-3 border font(nunito normal) rounded focus:( ring-4 ring-green-200 outline-8))`}

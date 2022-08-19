@@ -1,11 +1,12 @@
 import React from "react";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import { tw } from "twind";
 
 const HeroSection = (props) => {
   return (
     <div
       {...props}
-      id="heroSection"
+      id='heroSection'
       className={`p-4 xl:container mx-auto flex lgMax:justify-center justify-between lgMax:items-center lgMax:flex-col hero mb-[80px] sm:mb-[150px] ${props.className}`}
     >
       {/* Left  */}
@@ -32,18 +33,22 @@ const HeroSection = (props) => {
           or startup today.
         </p>
         <div className='action flex flex-wrap'>
-          <button
+          <AnchorLink
             type='button'
+            href='#contact'
+            offset='96'
             className={tw`mr-[36px] my-2 transition-all duration-300 px-8 py-2 border(none) font(nunito normal) text-white bg-primary rounded focus:( ring-4 ring-green-200 outline-8))`}
           >
             Hire Me
-          </button>
-          <button
+          </AnchorLink>
+          <AnchorLink
+            href='#portfolio'
+            offset='96'
             type='button'
             className={tw`transition-all my-2 duration-300 px-10 py-2 border(1 primary) font(nunito normal) text-primary bg-white rounded focus:( ring-4 ring-green-200))`}
           >
             See My Projects
-          </button>
+          </AnchorLink>
         </div>
       </div>
 

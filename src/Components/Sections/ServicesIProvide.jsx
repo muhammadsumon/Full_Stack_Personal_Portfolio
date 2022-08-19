@@ -67,7 +67,6 @@ const ServicesIProvide = (props) => {
               I can convert any design like figma, psd, xd into{" "}
               <br className='hidden sm:block' /> responsive HTML or wordpress
               website using <br className='hidden sm:block' /> Elementor, Divi
-              or Custom Theme Development
             </p>
           </div>
 

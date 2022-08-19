@@ -10,8 +10,7 @@ const Footer = () => {
       }}
       className='bg-center p-4 text-white trac leading-[180%] spac font-nunito mx-0 text-center text-[14px]'
     >
-      Ui/Ux Design & Developed Using Figma, React, Next, Node, Express, MongoDb
-      By
+      Ui/Ux Design & Developed Using Figma, React, Node, Express, MongoDb By
       <span className='text-green-50'> Muhammad Sumon</span>
     </footer>
   );

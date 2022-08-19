@@ -83,6 +83,7 @@ const ContactWithMe = (props) => {
   return (
     <div
       {...props}
+      id="contact"
       className={`p-4 xl:container mx-auto flex lgMax:items-center lgMax:flex-col lgMax:justify-center justify-between mb-4 ${props.className}`}
     >
       {/* Left Side  */}
@@ -97,9 +98,8 @@ const ContactWithMe = (props) => {
             Have Any project on mind ? Let’s start together to make it{" "}
             <br className='hidden sm:block' /> live . Don’t like form ?{" "}
             <a
-              href='.'
+              href='mailto:muhammadsumon.me@gmail.com'
               className='text-blue-600'
-              onClick={(e) => e.preventDefault()}
             >
               send email
             </a>
