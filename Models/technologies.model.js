@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const technologyModel = mongoose.Schema({
     name: {
@@ -8,4 +8,4 @@ const technologyModel = mongoose.Schema({
     }
 })
 
-export default mongoose.model("technologies", technologyModel)
+module.exports = mongoose.model("technologies", technologyModel)

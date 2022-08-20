@@ -1,14 +1,14 @@
-import projectTypes from "../Models/projectType.model.js";
+const projectCategories = require('../Models/projectCategories.model.js');
 
 /**
- * @desc {*} Get All Project Types
- * @route {*} GET /api/projecttypes/
+ * @desc {*} Get All Categories
+ * @route {*} GET /api/categories/
  * @access private
  */
 
-const getProjectTypes = (req, res) => {
+const getProjectCategories = (req, res) => {
 
-    projectTypes.find({}, (err, docs) => {
+    projectCategories.find({}, (err, docs) => {
         if (err) {
             res.status(400).json({
                 "error": "there are server side error !!",
@@ -17,27 +17,28 @@ const getProjectTypes = (req, res) => {
         } else {
             res.status(200).send(docs);
         }
+
     })
 }
 
 
 /**
- * @desc {*} Add New Project Type
- * @route {*} POST /api/projecttypes/
+ * @desc {*} Create a new category
+ * @route {*} POST /api/categories/
  * @access private
  */
 
-const addProjectType = (req, res) => {
+const addProjectCategory = (req, res) => {
 
-    projectTypes.create({ ...req.body }, ((err, doc) => {
+    projectCategories.create({ ...req.body }, ((err, doc) => {
         if (err) {
             res.status(400).send({
-                "error": "key or key value are required !!",
+                "error": "All key/fields are required !!",
                 "message": err
             })
         } else {
             res.status(200).send({
-                "message": "Project Type created Successfully",
+                "message": "Category created Successfully",
                 "createdDocument": doc
             })
         }
@@ -48,16 +49,16 @@ const addProjectType = (req, res) => {
 
 
 /**
- * @desc {*} Get Single Project Type
- * @route {*} GET /api/projecttypes/:id
+ * @desc {*} Get Single Category
+ * @route {*} GET /api/categories/:id
  * @access private
  */
 
-const getProjectType = (req, res) => {
+const getProjectCategory = (req, res) => {
 
     const id = req.params.id;
 
-    projectTypes.findById(id, (err, doc) => {
+    projectCategories.findById(id, ((err, doc) => {
 
         // If any error occur
         if (err !== null) {
@@ -67,32 +68,33 @@ const getProjectType = (req, res) => {
             })
         }
 
-        // If Project Type found
+        // If Category found
         else if (doc !== null) {
             res.status(200).send(doc)
         }
 
-        // If Project Type id wrong
+        // If Category id wrong
         else if ((err === null) && (doc === null)) {
             res.status(404).send({
-                "error": "Project Type id wrong !",
+                "error": "Category id wrong !",
                 "message": err
             })
         }
-    })
+    }))
 }
 
 
 /**
- * @desc {*} Delete Project Type
- * @route {*} DELETE /api/projecttypes/:id
+ * @desc {*} Delete Category
+ * @route {*} POST /api/categories/:id
  * @access private
  */
 
-const deleteProjectType = (req, res) => {
+const deleteProjectCategory = (req, res) => {
+
     const id = req.params.id;
 
-    projectTypes.findByIdAndDelete(id, (err, doc) => {
+    projectCategories.findByIdAndDelete(id, ((err, doc) => {
 
         // If any error occur
         if (err !== null) {
@@ -102,32 +104,32 @@ const deleteProjectType = (req, res) => {
             })
         }
 
-        // If Project Type Deleted Successfully
+        // If Category found
         else if (doc !== null) {
             res.status(200).send({
-                "message": "Project Type Deleted Successfully",
+                "message": "Category Deleted Successfully",
                 "deletedDocument": doc
             })
         }
 
-        // If Project Type id wrong
+        // If Category id wrong
         else if ((err === null) && (doc === null)) {
             res.status(404).send({
-                "error": "Project Type id wrong !",
+                "error": "Category id wrong !",
                 "message": err
             })
         }
-    });
+    }))
 }
 
 
 /**
- * @desc {*} Update Project Type
- * @route {*} PUT & PATCH /api/projecttypes/:id
+ * @desc {*} Update Category
+ * @route {*} PUT & PATCH /api/categories/:id
  * @access private
  */
 
-const updateProjectType = (req, res) => {
+const updateProjectCategory = (req, res) => {
 
     const id = req.params.id;
     const { name } = req.body;
@@ -138,7 +140,7 @@ const updateProjectType = (req, res) => {
             "message": "Any empty key value is not acceptable !!"
         })
     } else {
-        projectTypes.findByIdAndUpdate(id, { ...req.body }, { new: true }, (
+        projectCategories.findByIdAndUpdate(id, { ...req.body }, { new: true }, (
             (err, doc) => {
 
                 // If any error occur
@@ -149,18 +151,18 @@ const updateProjectType = (req, res) => {
                     })
                 }
 
-                // If Project Type updated Successfully
+                // If Category found
                 else if (doc !== null) {
                     res.status(200).send({
-                        "message": "Project Type updated Successfully",
+                        "message": "Category updated Successfully",
                         "updatedDocument": doc
                     })
                 }
 
-                // If Project Type id wrong
+                // If Category id wrong
                 else if ((err === null) && (doc === null)) {
                     res.status(404).send({
-                        "error": "Project Type id wrong !",
+                        "error": "Category id wrong !",
                         "message": err
                     })
                 }
@@ -169,11 +171,11 @@ const updateProjectType = (req, res) => {
     }
 }
 
-export {
-    getProjectTypes,
-    getProjectType,
-    addProjectType,
-    deleteProjectType,
-    updateProjectType
+module.exports = {
+    getProjectCategories,
+    getProjectCategory,
+    addProjectCategory,
+    deleteProjectCategory,
+    updateProjectCategory
 };
 

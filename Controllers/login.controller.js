@@ -1,6 +1,6 @@
-import bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
-import users from "../Models/users.model.js";
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const users = require('../Models/users.model.js');
 
 const logIn = (req, res) => {
 
@@ -88,4 +88,4 @@ const logIn = (req, res) => {
 
 }
 
-export default logIn;
+module.exports = logIn;

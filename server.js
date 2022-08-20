@@ -1,21 +1,21 @@
-import cookieParser from 'cookie-parser';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import exp, { json, urlencoded } from 'express';
-import fs from 'fs';
-import https from 'https';
-import generateToken from './Controllers/generateToken.controller.js';
-import logIn from './Controllers/login.controller.js';
-import logout from './Controllers/logout.controller.js';
-import query from './Controllers/query.controller.js';
-import connectDb from './Db/connectDb.js';
-import checkAuth from './Middleware/check.auth.js';
-import isAdmin from './Middleware/isAdmin.js';
-import projectCategory from './Routes/projectCategories.route.js';
-import projects from './Routes/projects.route.js';
-import projectType from './Routes/projectTypes.route.js';
-import technologies from './Routes/technologies.route.js';
-import user from './Routes/users.route.js';
+const cors = require('cors');
+const dotenv = require('dotenv');
+const exp = require('express');
+const fs = require('fs');
+const https = require('https');
+const generateToken = require('./Controllers/generateToken.controller.js');
+const logIn = require('./Controllers/login.controller.js');
+const logout = require('./Controllers/logout.controller.js');
+const query = require('./Controllers/query.controller.js');
+const connectDb = require('./Db/connectDb.js');
+const checkAuth = require('./Middleware/check.auth.js');
+const isAdmin = require('./Middleware/isAdmin.js');
+const projectCategory = require('./Routes/projectCategories.route.js');
+const projects = require('./Routes/projects.route.js');
+const projectType = require('./Routes/projectTypes.route.js');
+const technologies = require('./Routes/technologies.route.js');
+const user = require('./Routes/users.route.js');
+const cookieParser = require('cookie-parser');
 
 const appMode = process.env.App_Mode;
 const privateKey = appMode === "Development" ? fs.readFileSync('C:/Users/Mehrab/localhost-key.pem', 'utf8') : "";
@@ -51,8 +51,8 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Get Expected Data from Client
-app.use(json());
-app.use(urlencoded({ extended: false }))
+app.use(exp.json());
+app.use(exp.urlencoded({ extended: false }))
 app.use(exp.static('./src/Media'))
 
 // Set secret key
@@ -78,6 +78,6 @@ var httpsServer = https.createServer(credentials, app);
 
 appMode === "Development" ? httpsServer.listen(Port, () => {
     console.log(`Server is running on Port ${Port}`)
-}) : app.listen(process.env.PORT || Port, () => {
+}) : app.listen(5050 || Port, () => {
     console.log(`Server is running successfully :)`)
 })

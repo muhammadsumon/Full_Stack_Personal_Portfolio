@@ -1,6 +1,6 @@
-import { } from 'cookie';
-import jwt from 'jsonwebtoken';
-import users from "../Models/users.model.js";
+const users = require('../Models/users.model.js');
+const jwt = require('jsonwebtoken');
+
 
 const checkAuth = (req, res, next) => {
 
@@ -58,4 +58,4 @@ const checkAuth = (req, res, next) => {
     }
 }
 
-export default checkAuth;
+module.exports = checkAuth;

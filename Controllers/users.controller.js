@@ -1,6 +1,5 @@
-import bcrypt from 'bcryptjs';
-import users from "../Models/users.model.js";
-
+const bcrypt = require('bcryptjs');
+const users = require('../Models/users.model.js');
 
 /**
  * @desc {*} Get All Users
@@ -288,11 +287,11 @@ const deleteUser = (req, res) => {
 }
 
 
-export {
+module.exports = {
     getUsers,
     addUser,
     getUser,
     updateUser,
-    deleteUser,
+    deleteUser
 };
 

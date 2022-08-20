@@ -1,12 +1,12 @@
 {
-  "type": "module",
   "name": "backend",
+  "type": "commonjs",
   "version": "1.0.0",
   "description": "",
-  "main": "src/server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node src/server.js",
-    "server": "nodemon src/server.js"
+    "start": "node server.js",
+    "server": "nodemon server.js"
   },
   "keywords": [],
   "author": "",

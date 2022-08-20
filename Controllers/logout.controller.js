@@ -3,4 +3,4 @@ const logout = (req, res) => {
     res.send('logged out')
 }
 
-export default logout;
+module.exports = logout;

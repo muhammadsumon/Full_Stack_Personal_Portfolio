@@ -1,4 +1,4 @@
-import projects from "../Models/project.model.js";
+const projects = require('../Models/project.model.js');
 
 /**
  * @desc {*} Get All Projects
@@ -278,7 +278,7 @@ const updateProject = (req, res) => {
     );
 }
 
-export {
+module.exports = {
     addProject,
     getProjects,
     getProject,

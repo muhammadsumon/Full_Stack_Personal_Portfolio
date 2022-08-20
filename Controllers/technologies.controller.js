@@ -1,4 +1,4 @@
-import technologies from "../Models/technologies.model.js";
+const technologies = require('../Models/technologies.model.js');
 
 /**
  * @desc {*} Get All Technologies
@@ -55,7 +55,7 @@ const getTechnology = (req, res) => {
     const id = req.params.id;
 
     technologies.findById(id, (err, doc) => {
-        
+
         // If any error occur
         if (err !== null) {
             res.status(400).send({
@@ -168,7 +168,7 @@ const deleteTechnology = async (req, res) => {
 }
 
 
-export {
+module.exports = {
     getTechnologies,
     getTechnology,
     addTechnology,

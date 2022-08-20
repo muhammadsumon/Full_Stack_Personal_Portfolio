@@ -1,4 +1,4 @@
-import projectCollection from "../Models/project.model.js";
+const projectCollection = require('../Models/project.model.js');
 
 const query = (req, res) => {
     projectCollection.find(req.query, (err, docs) => {
@@ -16,4 +16,4 @@ const query = (req, res) => {
         populate("usedTechnology", ["_id", "name"]);
 }
 
-export default query;
+module.exports = query;
