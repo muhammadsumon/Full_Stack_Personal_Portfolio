@@ -11,7 +11,7 @@ import CollapsIcon from "../../Assets/Icons/Portfolio/CollapsIcon";
 import DownIcon from "../../Assets/Icons/Portfolio/DownIcon";
 import FilterIcon from "../../Assets/Icons/Portfolio/FilterIcon";
 import ProjectType from "../../Assets/Icons/Portfolio/ProjectType";
-import { REACT_APP_Api_Key, REACT_APP_Api_Url } from "../../config/config";
+import { React_App_Api_Url } from "../../config/config";
 import fetcher from "../../Utils/api";
 import InternalServerError from "../InternalServerError";
 import Loading from "../Loading";
@@ -276,33 +276,26 @@ const CompletedProjects = (props) => {
   useEffect(() => {
     dispatch({ type: "setLoading" });
     const initFetch = async () => {
-      const token = {
-        headers: { Authorization: `Bearer ${REACT_APP_Api_Key}` },
-      };
-
-      const projectsReq = await fetcher(
-        `${REACT_APP_Api_Url}/projects`,
-        token
-      ).catch((err) => {
-        if (err && err.status !== 200) {
-          dispatch({ type: "apiError" });
+      const projectsReq = await fetcher(`${React_App_Api_Url}/projects`).catch(
+        (err) => {
+          if (err && err.status !== 200) {
+            dispatch({ type: "apiError" });
+          }
         }
-      });
+      );
       dispatch({ type: "setProjects", projects: projectsReq?.data });
 
-      const typesReq = await fetcher(
-        `${REACT_APP_Api_Url}/projecttypes`,
-        token
-      ).catch((err) => {
-        if (err && err.status !== 200) {
-          dispatch({ type: "apiError" });
+      const typesReq = await fetcher(`${React_App_Api_Url}/projecttypes`).catch(
+        (err) => {
+          if (err && err.status !== 200) {
+            dispatch({ type: "apiError" });
+          }
         }
-      });
+      );
       dispatch({ type: "setTypes", types: typesReq?.data });
 
       const categoriesReq = await fetcher(
-        `${REACT_APP_Api_Url}/categories`,
-        token
+        `${React_App_Api_Url}/categories`
       ).catch((err) => {
         if (err && err.status !== 200) {
           dispatch({ type: "apiError" });
@@ -311,8 +304,7 @@ const CompletedProjects = (props) => {
       dispatch({ type: "setCategories", categories: categoriesReq?.data });
 
       const technologiesReq = await fetcher(
-        `${REACT_APP_Api_Url}/technologies`,
-        token
+        `${React_App_Api_Url}/technologies`
       ).catch((err) => {
         if (err && err.status !== 200) {
           dispatch({ type: "apiError" });
