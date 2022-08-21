@@ -14,6 +14,7 @@ import { Alert, Autocomplete, Box, Card, Grid, IconButton, InputAdornment, Stack
 import Chip from '@mui/material/Chip';
 // utils
 //
+import { apiUrl } from '../../../config';
 import useAuth from '../../../hooks/useAuth';
 import { PATH_DASHBOARD } from '../../../routes/paths';
 
@@ -110,7 +111,7 @@ export default function UserNewForm({ isEdit, currentUser }) {
           });
 
           await axios
-            .put(`${process.env.REACT_APP_HOST_API_URL}/users/${currentUser._id}`, userObject, {
+            .put(`${apiUrl}/users/${currentUser._id}`, userObject, {
               withCredentials: true
             })
             .then((response) => {
@@ -135,7 +136,7 @@ export default function UserNewForm({ isEdit, currentUser }) {
             setSubmitting(false);
           } else {
             await axios
-              .post(`${process.env.REACT_APP_HOST_API_URL}/users`, userObject, {
+              .post(`${apiUrl}/users`, userObject, {
                 withCredentials: true
               })
               .then((res) => {

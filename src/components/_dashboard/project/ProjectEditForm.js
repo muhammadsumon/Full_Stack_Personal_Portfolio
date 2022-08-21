@@ -25,6 +25,7 @@ import {
 } from '@mui/material';
 import Chip from '@mui/material/Chip';
 import axios from 'axios';
+import { apiUrl } from '../../../config';
 import { getCategoryList } from '../../../redux/slices/category';
 import { getTechnologyList } from '../../../redux/slices/technology';
 import { getTypeList } from '../../../redux/slices/type';
@@ -155,7 +156,7 @@ export default function ProjectNewForm({ currentProject }) {
             return false;
           });
           await axios
-            .put(`${process.env.REACT_APP_HOST_API_URL}/projects/${currentProject._id}`, formObject, {
+            .put(`${apiUrl}/projects/${currentProject._id}`, formObject, {
               withCredentials: true
             })
             .then((response) => {

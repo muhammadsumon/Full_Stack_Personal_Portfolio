@@ -61,7 +61,7 @@ function AuthProvider({ children }) {
         const accessToken = localStorage.getItem('accessToken');
 
         if (accessToken && isValidToken(accessToken)) {
-          await axios.get(`${process.env.REACT_APP_HOST_API_URL}/projects`, { withCredentials: true }).then((res) => {
+          await axios.get(`${apiUrl}/projects`, { withCredentials: true }).then((res) => {
             if (res.status === 200) {
               setSession(accessToken);
               const loggenInUser = decodeToken(accessToken);
@@ -77,7 +77,6 @@ function AuthProvider({ children }) {
                 }
               });
             }
-            console.log(res)
           })
         } else {
           dispatch({
@@ -103,13 +102,11 @@ function AuthProvider({ children }) {
   }, []);
 
   const login = async (username, password) => {
+
     const response = await axios.post(
-      `${apiUrl}/auth/login`,
-      {
-        username,
-        password
-      },
-      { withCredentials: true }
+      `${apiUrl}/auth/login`, {
+      username, password
+    }, { withCredentials: true }
     );
 
     const { accessToken, user } = response.data;
@@ -129,7 +126,7 @@ function AuthProvider({ children }) {
   const logout = async () => {
     setSession(null);
     dispatch({ type: 'LOGOUT' });
-    await axios.get(`${process.env.REACT_APP_HOST_API_URL}/auth/logout`, {
+    await axios.get(`${apiUrl}/auth/logout`, {
       withCredentials: true
     });
   };
@@ -153,3 +150,4 @@ function AuthProvider({ children }) {
 }
 
 export { AuthContext, AuthProvider };
+

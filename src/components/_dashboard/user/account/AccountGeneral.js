@@ -13,6 +13,7 @@ import { Alert, Autocomplete, Box, Card, Grid, IconButton, InputAdornment, Stack
 import Chip from '@mui/material/Chip';
 // utils
 //
+import { apiUrl } from '../../../../config';
 import useAuth from '../../../../hooks/useAuth';
 
 // ----------------------------------------------------------------------
@@ -99,7 +100,7 @@ export default function UserForm({ currentUser }) {
         });
 
         await axios
-          .put(`${process.env.REACT_APP_HOST_API_URL}/users/${currentUser.userId}`, userObject, {
+          .put(`${apiUrl}/users/${currentUser.userId}`, userObject, {
             withCredentials: true
           })
           .then((response) => {
