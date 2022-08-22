@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
 })
 
 const fileFilter = (req, file, cb) => {
-	if ((file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg" || file.mimetype == "image/svg" || file.mimetype == "image/webp") && file) {
+	if ((file.mimetype.match(/image\//g)) && file) {
 		cb(null, true);
 	} else {
 		return cb(new Error('Invalid mime type. Try to upload png, jpg, jpeg, svg or webp file'));
