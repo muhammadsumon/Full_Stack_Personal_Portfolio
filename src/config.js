@@ -1,3 +1,4 @@
+import { PATH_DASHBOARD } from './routes/paths';
 import { getAccessToken } from './utils/jwt';
 
 export const firebaseConfig = {
@@ -24,5 +25,5 @@ export const auth0Config = {
 export const mapConfig = process.env.REACT_APP_MAP_MAPBOX;
 export const apiUrl = "https://api.muhammadsumon.me";
 export const accessToken = getAccessToken();
-
+export const PATH_AFTER_LOGIN = PATH_DASHBOARD.general.analytics; // as '/dashboard/app'
 export const googleAnalyticsConfig = process.env.REACT_APP_GA_MEASUREMENT_ID;

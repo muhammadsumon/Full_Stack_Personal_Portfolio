@@ -13,6 +13,7 @@ import GuestGuard from '../guards/GuestGuard';
 
 // components
 import LoadingScreen from '../components/LoadingScreen';
+import { PATH_AFTER_LOGIN } from '../config';
 
 // ----------------------------------------------------------------------
 
@@ -45,18 +46,12 @@ const Loadable = (Component) => (props) => {
 export default function Router() {
   return useRoutes([
     {
-      path: 'auth',
-      children: [
-        {
-          path: 'login',
-          element: (
-            <GuestGuard>
-              <Login />
-            </GuestGuard>
-          )
-        },
-        { path: 'auth/login', element: <Login /> }
-      ]
+      path: 'auth/login',
+      element: (
+        <GuestGuard>
+          <Login />
+        </GuestGuard>
+      )
     },
 
     // Dashboard Routes
@@ -68,7 +63,7 @@ export default function Router() {
         </AuthGuard>
       ),
       children: [
-        { element: <Navigate to="/analytics" replace />, index: true },
+        { element: <Navigate to={PATH_AFTER_LOGIN} replace />, index: true },
         { path: 'analytics', element: <GeneralAnalytics /> },
         {
           path: 'project',

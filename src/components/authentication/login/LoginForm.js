@@ -51,15 +51,16 @@ export default function LoginForm({ isLoading }) {
             </MIconButton>
           )
         });
+        Window.alert("ok");
+        console.log("ok")
         if (isMountedRef.current) {
           setSubmitting(false);
         }
       } catch (error) {
-        console.log(error);
         resetForm();
         if (isMountedRef.current) {
           setSubmitting(false);
-          setErrors({ afterSubmit: error.response.data.message });
+          setErrors({ afterSubmit: error?.response.data.message });
         }
       }
     }
