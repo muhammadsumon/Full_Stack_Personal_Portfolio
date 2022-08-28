@@ -16,6 +16,7 @@ import { PATH_DASHBOARD } from '../../../routes/paths';
 // ----------------------------------------------------------------------
 
 TypeNewForm.propTypes = {
+  container: PropTypes.bool,
   isEdit: PropTypes.bool,
   currentType: PropTypes.object
 };

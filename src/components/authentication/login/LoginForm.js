@@ -51,8 +51,7 @@ export default function LoginForm({ isLoading }) {
             </MIconButton>
           )
         });
-        Window.alert("ok");
-        console.log("ok")
+
         if (isMountedRef.current) {
           setSubmitting(false);
         }

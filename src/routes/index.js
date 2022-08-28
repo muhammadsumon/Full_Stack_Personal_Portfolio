@@ -68,7 +68,7 @@ export default function Router() {
         {
           path: 'project',
           children: [
-            { element: <Navigate to="/project/list" replace /> },
+            { element: <Navigate to="/project/list" replace />, index: true },
             { path: 'list', element: <ProjectList /> },
             { path: 'new', element: <ProjectCreate /> },
             { path: ':id/edit', element: <ProjectEdit /> }
@@ -77,7 +77,7 @@ export default function Router() {
         {
           path: 'type',
           children: [
-            { element: <Navigate to="/type/list" replace /> },
+            { element: <Navigate to="/type/list" replace />, index: true },
             { path: 'list', element: <TypeList /> },
             { path: 'new', element: <TypeCreate /> },
             { path: ':id/edit', element: <TypeCreate /> }
@@ -86,7 +86,7 @@ export default function Router() {
         {
           path: 'category',
           children: [
-            { element: <Navigate to="/category/list" replace /> },
+            { element: <Navigate to="/category/list" replace />, index: true },
             { path: 'list', element: <CategoryList /> },
             { path: 'new', element: <CategoryCreate /> },
             { path: ':id/edit', element: <CategoryCreate /> }
@@ -95,7 +95,7 @@ export default function Router() {
         {
           path: 'technology',
           children: [
-            { element: <Navigate to="/technology/list" replace /> },
+            { element: <Navigate to="/technology/list" replace />, index: true },
             { path: 'list', element: <TechnologyList /> },
             { path: 'new', element: <TechnologyCreate /> },
             { path: ':id/edit', element: <TechnologyCreate /> }
@@ -104,7 +104,7 @@ export default function Router() {
         {
           path: 'user',
           children: [
-            { element: <Navigate to="/user/list" replace /> },
+            { element: <Navigate to="/user/list" replace />, index: true },
             {
               path: 'list',
               element: (

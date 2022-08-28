@@ -7,7 +7,6 @@ import GlobalStyles from './theme/globalStyles';
 import useAuth from './hooks/useAuth';
 // components
 import { BaseOptionChartStyle } from './components/charts/BaseOptionChart';
-import GoogleAnalytics from './components/GoogleAnalytics';
 import LoadingScreen, { ProgressBarStyle } from './components/LoadingScreen';
 import NotistackProvider from './components/NotistackProvider';
 import RtlLayout from './components/RtlLayout';
@@ -33,7 +32,6 @@ export default function App() {
               <BaseOptionChartStyle />
               <Settings />
               <ScrollToTop />
-              <GoogleAnalytics />
               {isInitialized ? <Router /> : <LoadingScreen />}
             </NotistackProvider>
           </RtlLayout>
