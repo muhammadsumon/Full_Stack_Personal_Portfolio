@@ -53,7 +53,7 @@ app.use(cors(corsOptions));
 // Get Expected Data from Client
 app.use(exp.json());
 app.use(exp.urlencoded({ extended: false }))
-app.use(exp.static('./src/Media'))
+app.use(exp.static('./Media'))
 
 // Set secret key
 app.use(cookieParser(process.env.App_Cookie_Secret));
@@ -78,6 +78,6 @@ var httpsServer = https.createServer(credentials, app);
 
 appMode === "Development" ? httpsServer.listen(Port, () => {
     console.log(`Server is running on Port ${Port}`)
-}) : app.listen(5050 || Port, () => {
+}) : app.listen(Port, () => {
     console.log(`Server is running successfully :)`)
 })
