@@ -11,7 +11,7 @@ import CollapsIcon from "../../Assets/Icons/Portfolio/CollapsIcon";
 import DownIcon from "../../Assets/Icons/Portfolio/DownIcon";
 import FilterIcon from "../../Assets/Icons/Portfolio/FilterIcon";
 import ProjectType from "../../Assets/Icons/Portfolio/ProjectType";
-import { React_App_Api_Url } from "../../config/config";
+import { React_App_Api_Url } from "../../config";
 import fetcher from "../../Utils/api";
 import InternalServerError from "../InternalServerError";
 import Loading from "../Loading";

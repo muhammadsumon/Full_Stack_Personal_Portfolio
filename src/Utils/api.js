@@ -1,5 +1,5 @@
 import axios from "axios";
-import { React_App_Public_Api_Key } from "../config/config";
+import { React_App_Public_Api_Key } from "../config";
 
 const fetcher = (url) => {
     return axios.get(url, {
