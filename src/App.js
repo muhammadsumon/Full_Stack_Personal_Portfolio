@@ -15,7 +15,6 @@ import Settings from './components/settings';
 import ThemeLocalization from './components/ThemeLocalization';
 import ThemePrimaryColor from './components/ThemePrimaryColor';
 
-
 // ----------------------------------------------------------------------
 
 export default function App() {
