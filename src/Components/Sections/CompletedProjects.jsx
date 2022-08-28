@@ -11,7 +11,7 @@ import CollapsIcon from "../../Assets/Icons/Portfolio/CollapsIcon";
 import DownIcon from "../../Assets/Icons/Portfolio/DownIcon";
 import FilterIcon from "../../Assets/Icons/Portfolio/FilterIcon";
 import ProjectType from "../../Assets/Icons/Portfolio/ProjectType";
-import { React_App_Api_Url } from "../../config";
+import { apiUrl } from "../../config";
 import fetcher from "../../Utils/api";
 import InternalServerError from "../InternalServerError";
 import Loading from "../Loading";
@@ -276,7 +276,7 @@ const CompletedProjects = (props) => {
   useEffect(() => {
     dispatch({ type: "setLoading" });
     const initFetch = async () => {
-      const projectsReq = await fetcher(`${React_App_Api_Url}/projects`).catch(
+      const projectsReq = await fetcher(`${apiUrl}/projects`).catch(
         (err) => {
           if (err && err.status !== 200) {
             dispatch({ type: "apiError" });
@@ -285,7 +285,7 @@ const CompletedProjects = (props) => {
       );
       dispatch({ type: "setProjects", projects: projectsReq?.data });
 
-      const typesReq = await fetcher(`${React_App_Api_Url}/projecttypes`).catch(
+      const typesReq = await fetcher(`${apiUrl}/projecttypes`).catch(
         (err) => {
           if (err && err.status !== 200) {
             dispatch({ type: "apiError" });
@@ -295,7 +295,7 @@ const CompletedProjects = (props) => {
       dispatch({ type: "setTypes", types: typesReq?.data });
 
       const categoriesReq = await fetcher(
-        `${React_App_Api_Url}/categories`
+        `${apiUrl}/categories`
       ).catch((err) => {
         if (err && err.status !== 200) {
           dispatch({ type: "apiError" });
@@ -304,7 +304,7 @@ const CompletedProjects = (props) => {
       dispatch({ type: "setCategories", categories: categoriesReq?.data });
 
       const technologiesReq = await fetcher(
-        `${React_App_Api_Url}/technologies`
+        `${apiUrl}/technologies`
       ).catch((err) => {
         if (err && err.status !== 200) {
           dispatch({ type: "apiError" });
