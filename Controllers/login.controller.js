@@ -47,9 +47,7 @@ const logIn = (req, res) => {
                                 httpOnly: true,
                                 withCredentials: true,
                                 sameSite: 'none',
-                                ...[process.env.NODE_ENV ? {
-                                    secure: true,
-                                } : { secure: false }],
+                                secure: true,
                                 signed: true
                             })
 
