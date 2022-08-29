@@ -1,5 +1,7 @@
 const logout = (req, res) => {
-    res.clearCookie('biscuit')
+    res.clearCookie('biscuit', {
+        domain: ".muhammadsumon.me"
+    })
     res.send('logged out')
 }
 
