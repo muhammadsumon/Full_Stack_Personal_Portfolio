@@ -33,6 +33,8 @@ export default function LoginForm({ isLoading }) {
     password: Yup.string().required('Password is required')
   });
 
+  console.log(process.env.NODE_ENV)
+
   const formik = useFormik({
     initialValues: {
       username: '',
