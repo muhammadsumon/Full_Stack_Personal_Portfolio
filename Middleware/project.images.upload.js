@@ -49,7 +49,7 @@ const fileHandle = ((req, res, next) => {
 				pImagesLink.push({
 					name: file.filename,
 					originalName: file.originalname,
-					preview: `${process.env.App_Rest_Api_Url}/images/${fileName}.svg`,
+					preview: `https://api.muhammadsumon.me/images/${fileName}.svg`,
 					size: file.size,
 					type: file.mimetype
 				})
