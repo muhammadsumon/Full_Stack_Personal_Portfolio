@@ -62,7 +62,7 @@ app.use(cookieParser(process.env.App_Cookie_Secret));
 app.use("/auth/login", logIn);
 app.use("/auth/logout", logout);
 
-console.log(process.env.NODE_ENV)
+console.error(process.env.NODE_ENV)
 
 // Main Routes
 app.use("/projects", checkAuth, projects);
