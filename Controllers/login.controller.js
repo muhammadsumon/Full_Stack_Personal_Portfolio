@@ -47,7 +47,7 @@ const logIn = (req, res) => {
                                 httpOnly: true,
                                 withCredentials: true,
                                 sameSite: 'none',
-                                ...[process.env.NODE_ENV === 'production' ? { domain: '.muhammadsumon.me' } : { domain: 'localhostw' }],
+                                ...[process.env.NODE_ENV === 'production' ? { domain: '.muhammadsumon.me' } : { domain: 'localhost' }],
                                 secure: true,
                                 signed: true
                             })
