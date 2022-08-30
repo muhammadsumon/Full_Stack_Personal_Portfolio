@@ -25,3 +25,10 @@ I created my personal portfolio rest api using Node, Express, Mongo Db.
 [Live Preview](https://cutt.ly/ms-restapi) &nbsp; &nbsp; [Code Link](https://github.com/muhammadsumon/Full_Stack_Personal_Portfolio/tree/Restapi)
 
 <img src="https://user-images.githubusercontent.com/71124853/187373613-4e093a1b-4a3f-412e-a411-f6044b42cd02.png">
+
+## TODO
+- [x] Create Personal Portfolio Frontend Using React Js
+- [x] Create Personal Portfolio Backend
+- [x] Create Personal Portfolio Rest Api using Node Js, Express Js, Mongo Db.
+
+- [ ] Create Personal Portfolio Frontend **Using NEXT JS**
