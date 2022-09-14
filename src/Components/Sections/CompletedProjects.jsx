@@ -276,40 +276,36 @@ const CompletedProjects = (props) => {
   useEffect(() => {
     dispatch({ type: "setLoading" });
     const initFetch = async () => {
-      const projectsReq = await fetcher(`${apiUrl}/projects`).catch(
-        (err) => {
-          if (err && err.status !== 200) {
-            dispatch({ type: "apiError" });
-          }
+      const projectsReq = await fetcher(`${apiUrl}/projects`).catch((err) => {
+        if (err && err.status !== 200) {
+          dispatch({ type: "apiError" });
         }
-      );
+      });
       dispatch({ type: "setProjects", projects: projectsReq?.data });
 
-      const typesReq = await fetcher(`${apiUrl}/projecttypes`).catch(
+      const typesReq = await fetcher(`${apiUrl}/projecttypes`).catch((err) => {
+        if (err && err.status !== 200) {
+          dispatch({ type: "apiError" });
+        }
+      });
+      dispatch({ type: "setTypes", types: typesReq?.data });
+
+      const categoriesReq = await fetcher(`${apiUrl}/categories`).catch(
         (err) => {
           if (err && err.status !== 200) {
             dispatch({ type: "apiError" });
           }
         }
       );
-      dispatch({ type: "setTypes", types: typesReq?.data });
-
-      const categoriesReq = await fetcher(
-        `${apiUrl}/categories`
-      ).catch((err) => {
-        if (err && err.status !== 200) {
-          dispatch({ type: "apiError" });
-        }
-      });
       dispatch({ type: "setCategories", categories: categoriesReq?.data });
 
-      const technologiesReq = await fetcher(
-        `${apiUrl}/technologies`
-      ).catch((err) => {
-        if (err && err.status !== 200) {
-          dispatch({ type: "apiError" });
+      const technologiesReq = await fetcher(`${apiUrl}/technologies`).catch(
+        (err) => {
+          if (err && err.status !== 200) {
+            dispatch({ type: "apiError" });
+          }
         }
-      });
+      );
       dispatch({
         type: "setTechnologies",
         technologies: technologiesReq?.data,

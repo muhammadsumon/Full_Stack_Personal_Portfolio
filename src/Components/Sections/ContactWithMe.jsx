@@ -83,14 +83,14 @@ const ContactWithMe = (props) => {
   return (
     <div
       {...props}
-      id="contact"
+      id='contact'
       className={`p-4 xl:container mx-auto flex lgMax:items-center lgMax:flex-col lgMax:justify-center justify-between mb-4 ${props.className}`}
     >
       {/* Left Side  */}
       <div className='left lgMax:text-center'>
         <div className='flex flex-col mx-auto heading mb-[50px] sm:mb-[80px]'>
           <h2 className='text-[25px] sm:text-[30px] font-mulish capitalize font-[600] text-gray-900 leading-[45px] tracking-[0.03em]'>
-            <span className='ms-hightlight ms-hightlight-2 py-2'>Let’s</span>{" "}
+            <span className='py-2 ms-hightlight ms-hightlight-2'>Let’s</span>{" "}
             start a project <br className='hidden lg:block' />
             together !
           </h2>
@@ -122,7 +122,7 @@ const ContactWithMe = (props) => {
               <Alert />
 
               {/* Client Name  */}
-              <div className='input-group mb-4'>
+              <div className='mb-4 input-group'>
                 <label
                   htmlFor='clientName'
                   className='text-gray-900 text-[16px] capitalize font-normal !font-jost leading-[28px] tracking-[0.03em]'
@@ -150,7 +150,7 @@ const ContactWithMe = (props) => {
               </div>
 
               {/* Client Email  */}
-              <div className='input-group mb-4'>
+              <div className='mb-4 input-group'>
                 <label
                   htmlFor='clientEmail'
                   className='text-gray-900 text-[16px] capitalize font-normal !font-jost leading-[28px] tracking-[0.03em]'
@@ -178,7 +178,7 @@ const ContactWithMe = (props) => {
               </div>
 
               {/* Client Budget  */}
-              <div className='input-group mb-4'>
+              <div className='mb-4 input-group'>
                 <label
                   htmlFor='clientBudget'
                   className='text-gray-900 text-[16px] capitalize font-normal !font-jost leading-[28px] tracking-[0.03em]'
@@ -206,7 +206,7 @@ const ContactWithMe = (props) => {
               </div>
 
               {/* Project Brief  */}
-              <div className='input-group mb-4'>
+              <div className='mb-4 input-group'>
                 <label
                   htmlFor='projectBrief'
                   className='text-gray-900 text-[16px] capitalize font-normal !font-jost leading-[28px] tracking-[0.03em]'

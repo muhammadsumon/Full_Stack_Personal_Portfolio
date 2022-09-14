@@ -21,7 +21,7 @@ const ExperiencedTech = (props) => {
       {/* Heading  */}
       <div className='heading mb-[50px] sm:mb-[50px]'>
         <h2 className='text-[24px] text-center sm:text-[30px] !font-jost font-semibold w-fit mx-auto text-gray-900 leading-[35px] sm:leading-[45px] tracking-[0.1em] mt-[18px] mb-[17px]'>
-          <span className='ms-hightlight ms-hightlight-2 py-2'>
+          <span className='py-2 ms-hightlight ms-hightlight-2'>
             Technologies
           </span>{" "}
           I{" "}
@@ -38,12 +38,12 @@ const ExperiencedTech = (props) => {
 
       {/* Skills  */}
       <div className='skills'>
-        <div className='expertise mx-auto flex gap-10 sm:gap-14 justify-center items-center flex-wrap'>
+        <div className='flex flex-wrap items-center justify-center gap-10 mx-auto expertise sm:gap-14'>
           <div
             data-aos='fade-up'
             data-aos-once='true'
             data-aos-delay='100'
-            className='w-52 sm:w-fit whitespace-nowrap html p-3  flex gap-2 items-center shadow-skill '
+            className='flex items-center gap-2 p-3 w-52 sm:w-fit whitespace-nowrap html shadow-skill '
           >
             <ImHtmlFive className='icon text-[22px] mr-2 text-red-400' />
             <h2 className='text-gray-900 font-semibold border-l-2 border-gray-300 pl-4 text-[20px]'>
@@ -55,7 +55,7 @@ const ExperiencedTech = (props) => {
             data-aos='fade-up'
             data-aos-once='true'
             data-aos-delay='300'
-            className='w-52 sm:w-fit whitespace-nowrap css p-3  flex gap-2 items-center shadow-skill '
+            className='flex items-center gap-2 p-3 w-52 sm:w-fit whitespace-nowrap css shadow-skill '
           >
             <IoLogoCss3 className='icon text-[25px] mr-2 text-blue-600' />
             <h2 className='text-gray-900 font-semibold border-l-2 border-gray-300 pl-4 text-[20px]'>
@@ -67,7 +67,7 @@ const ExperiencedTech = (props) => {
             data-aos='fade-up'
             data-aos-once='true'
             data-aos-delay='500'
-            className='w-52 sm:w-fit whitespace-nowrap js p-3  flex gap-2 items-center shadow-skill '
+            className='flex items-center gap-2 p-3 w-52 sm:w-fit whitespace-nowrap js shadow-skill '
           >
             <Js />
             <h2 className='text-gray-900 font-semibold border-l-2 border-gray-300 pl-4 text-[20px]'>
@@ -79,7 +79,7 @@ const ExperiencedTech = (props) => {
             data-aos='fade-up'
             data-aos-once='true'
             data-aos-delay='700'
-            className='w-52 sm:w-fit whitespace-nowrap bootstrap p-3  flex gap-2 items-center shadow-skill '
+            className='flex items-center gap-2 p-3 w-52 sm:w-fit whitespace-nowrap bootstrap shadow-skill '
           >
             <Bootstrap className='icon text-[22px] mr-2' />
             <h2 className=' text-gray-900 font-semibold border-l-2 border-gray-300 pl-4 text-[20px]'>
@@ -91,7 +91,7 @@ const ExperiencedTech = (props) => {
             data-aos='fade-up'
             data-aos-once='true'
             data-aos-delay='900'
-            className='w-52 sm:w-fit whitespace-nowrap sass p-3  flex gap-2 items-center shadow-skill '
+            className='flex items-center gap-2 p-3 w-52 sm:w-fit whitespace-nowrap sass shadow-skill '
           >
             <Sass className='icon text-[22px] mr-2' />
             <h2 className='text-gray-900 font-semibold border-l-2 border-gray-300 pl-4 text-[20px]'>
@@ -103,7 +103,7 @@ const ExperiencedTech = (props) => {
             data-aos='fade-up'
             data-aos-once='true'
             data-aos-delay='1100'
-            className='w-52 sm:w-fit whitespace-nowrap tailwind p-3  flex gap-2 items-center shadow-skill '
+            className='flex items-center gap-2 p-3 w-52 sm:w-fit whitespace-nowrap tailwind shadow-skill '
           >
             <Tailwind className='icon text-[22px] mr-2' />
             <h2 className='text-gray-900 font-semibold border-l-2 border-gray-300 pl-4 text-[20px]'>
@@ -115,7 +115,7 @@ const ExperiencedTech = (props) => {
             data-aos='fade-up'
             data-aos-once='true'
             data-aos-delay='1300'
-            className='w-52 sm:w-fit whitespace-nowrap figma p-3  flex gap-2 items-center shadow-skill '
+            className='flex items-center gap-2 p-3 w-52 sm:w-fit whitespace-nowrap figma shadow-skill '
           >
             <Figma className='icon text-[22px] mr-2' />
             <h2 className='text-gray-900 font-semibold border-l-2 border-gray-300 pl-4 text-[20px]'>
@@ -127,7 +127,7 @@ const ExperiencedTech = (props) => {
             data-aos='fade-up'
             data-aos-once='true'
             data-aos-delay='1500'
-            className='w-52 sm:w-fit whitespace-nowrap github p-3  flex gap-2 items-center shadow-skill '
+            className='flex items-center gap-2 p-3 w-52 sm:w-fit whitespace-nowrap github shadow-skill '
           >
             <GitGithub className='icon text-[22px] mr-2' />
             <h2 className='text-gray-900 font-semibold border-l-2 border-gray-300 pl-4 text-[20px]'>
@@ -145,19 +145,19 @@ const ExperiencedTech = (props) => {
             className='heading mb-[50px]'
           >
             <h2 className='text-[22px] text-left sm:text-[24px] !font-jost w-fit mx-auto lg:mr-auto text-gray-900 leading-[40px] sm:leading-[45px] tracking-[0.1em] mt-[18px]'>
-              <span className='ms-hightlight ms-hightlight-h-full py-1 pl-2'>
+              <span className='py-1 pl-2 ms-hightlight ms-hightlight-h-full'>
                 Other Technologies
               </span>{" "}
               Which I know
             </h2>
           </div>
 
-          <div className='other mx-auto flex gap-10 sm:gap-14 justify-center items-center flex-wrap'>
+          <div className='flex flex-wrap items-center justify-center gap-10 mx-auto other sm:gap-14'>
             <div
               data-aos='fade-up'
               data-aos-once='true'
               data-aos-delay='2200'
-              className='w-52 sm:w-fit whitespace-nowrap react p-3  flex gap-2 items-center shadow-skill '
+              className='flex items-center gap-2 p-3 w-52 sm:w-fit whitespace-nowrap react shadow-skill '
             >
               <ReactIcon className='icon text-[22px] mr-2' />
               <h2 className='text-gray-900 font-semibold border-l-2 border-gray-300 pl-4 text-[20px]'>
@@ -169,7 +169,7 @@ const ExperiencedTech = (props) => {
               data-aos='fade-up'
               data-aos-once='true'
               data-aos-delay='2400'
-              className='w-52 sm:w-fit whitespace-nowrap nodeJs p-3  flex gap-2 items-center shadow-skill '
+              className='flex items-center gap-2 p-3 w-52 sm:w-fit whitespace-nowrap nodeJs shadow-skill '
             >
               <Nodejs className='icon text-[22px] mr-2' />
               <h2 className='text-gray-900 font-semibold border-l-2 border-gray-300 pl-4 text-[20px]'>
@@ -181,7 +181,7 @@ const ExperiencedTech = (props) => {
               data-aos='fade-up'
               data-aos-once='true'
               data-aos-delay='2600'
-              className='w-52 sm:w-fit whitespace-nowrap p-3  flex gap-2 items-center shadow-skill '
+              className='flex items-center gap-2 p-3 w-52 sm:w-fit whitespace-nowrap shadow-skill '
             >
               <Express className='icon text-[22px] mr-2' />
               <h2 className='text-gray-900 font-semibold border-l-2 border-gray-300 pl-4 text-[20px]'>
@@ -193,7 +193,7 @@ const ExperiencedTech = (props) => {
               data-aos='fade-up'
               data-aos-once='true'
               data-aos-delay='2800'
-              className='w-52 sm:w-fit whitespace-nowrap p-3  flex gap-2 items-center shadow-skill '
+              className='flex items-center gap-2 p-3 w-52 sm:w-fit whitespace-nowrap shadow-skill '
             >
               <MongoDb className='icon text-[22px] mr-2' />
               <h2 className=' text-gray-900 font-semibold border-l-2 border-gray-300 pl-4 text-[20px]'>

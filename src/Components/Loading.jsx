@@ -5,7 +5,7 @@ const Loading = () => {
   const [loading] = useState(true);
 
   return (
-    <div className='w-full h-full flex items-center justify-center '>
+    <div className='flex items-center justify-center w-full h-full '>
       <GooSpinner
         size={70}
         postion='absolute'

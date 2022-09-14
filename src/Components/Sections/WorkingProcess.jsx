@@ -10,7 +10,7 @@ const WorkingProcess = (props) => {
       {/* Heading  */}
       <div className='xl:container mx-auto heading mb-[50px] sm:mb-[80px]'>
         <h2 className='text-[25px] text-center sm:text-[30px] !font-jost font-semibold w-fit mx-auto text-gray-900 leading-[35px] sm:leading-[45px] tracking-[0.03em] mt-[18px] mb-[17px]'>
-          <span className='ms-hightlight ms-hightlight-2 py-2'>My</span> Wor
+          <span className='py-2 ms-hightlight ms-hightlight-2'>My</span> Wor
           <span className='ms-hightlight ms-hightlight-line'>king Pro</span>
           cess
         </h2>
@@ -33,7 +33,7 @@ const WorkingProcess = (props) => {
           data-aos-delay='100'
           className='process-item bg-white z-10 p-4 mx-2 sm:m-0 px-6 shadow-service w-[480px]'
         >
-          <div className='header flex-row-reverse sm:flex-row pt-2 pb-4 flex justify-between items-center'>
+          <div className='flex flex-row-reverse items-center justify-between pt-2 pb-4 header sm:flex-row'>
             <h3 className='ms-hightlight ms-hightlight-3 text-[46px] leading-6 !font-jost font-semibold tracking-[0.01em] text-gray-50 pl-5'>
               01
             </h3>
@@ -62,7 +62,7 @@ const WorkingProcess = (props) => {
           data-aos-delay='300'
           className='process-item bg-white z-10 p-4 mx-2 sm:m-0 px-6 shadow-service w-[480px]'
         >
-          <div className='header pt-2 pb-4 flex justify-between items-center'>
+          <div className='flex items-center justify-between pt-2 pb-4 header'>
             <h3 className='ms-hightlight ms-hightlight-3 text-[46px] leading-6 !font-jost font-semibold tracking-[0.01em] text-gray-50 pl-5'>
               02
             </h3>
@@ -90,7 +90,7 @@ const WorkingProcess = (props) => {
           data-aos-delay='500'
           className='process-item bg-white z-10 p-4 mx-2 sm:m-0 px-6 shadow-service w-[480px]'
         >
-          <div className='header pt-2 pb-4 flex-row-reverse sm:flex-row flex justify-between items-center'>
+          <div className='flex flex-row-reverse items-center justify-between pt-2 pb-4 header sm:flex-row'>
             <h3 className='ms-hightlight ms-hightlight-3 text-[46px] leading-6 !font-jost font-semibold tracking-[0.01em] text-gray-50 pl-5'>
               03
             </h3>
@@ -119,7 +119,7 @@ const WorkingProcess = (props) => {
           data-aos-delay='700'
           className='process-item bg-white z-10 p-4 mx-2 sm:m-0 px-6 shadow-service w-[480px]'
         >
-          <div className='header pt-2 pb-4 flex justify-between items-center'>
+          <div className='flex items-center justify-between pt-2 pb-4 header'>
             <h3 className='ms-hightlight ms-hightlight-3 text-[46px] leading-6 !font-jost font-semibold tracking-[0.01em] text-gray-50 pl-5'>
               04
             </h3>
@@ -148,7 +148,7 @@ const WorkingProcess = (props) => {
           data-aos-delay='900'
           className='process-item bg-white z-10 p-4 mx-2 sm:m-0 px-6 shadow-service w-[480px]'
         >
-          <div className='header pt-2 pb-4 flex justify-between flex-row-reverse sm:flex-row items-center'>
+          <div className='flex flex-row-reverse items-center justify-between pt-2 pb-4 header sm:flex-row'>
             <h3 className='ms-hightlight ms-hightlight-3 text-[46px] leading-6 !font-jost font-semibold tracking-[0.01em] text-gray-50 pl-5'>
               05
             </h3>
@@ -177,7 +177,7 @@ const WorkingProcess = (props) => {
           data-aos-delay='1100'
           className='process-item bg-white z-10 p-4 mx-2 sm:m-0 px-6 shadow-service w-[480px]'
         >
-          <div className='header pt-2 pb-4 flex justify-between items-center'>
+          <div className='flex items-center justify-between pt-2 pb-4 header'>
             <h3 className='ms-hightlight ms-hightlight-3 text-[46px] leading-6 !font-jost font-semibold tracking-[0.01em] text-gray-50 pl-5'>
               06
             </h3>

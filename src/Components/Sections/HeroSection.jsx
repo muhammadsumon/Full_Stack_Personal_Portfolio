@@ -10,13 +10,13 @@ const HeroSection = (props) => {
       className={`p-4 xl:container mx-auto flex lgMax:justify-center justify-between lgMax:items-center lgMax:flex-col hero mb-[80px] sm:mb-[150px] ${props.className}`}
     >
       {/* Left  */}
-      <div className='mt-16 sm:mt-36 order-1 md:order-0'>
+      <div className='order-1 mt-16 sm:mt-36 md:order-0'>
         <p
           className={tw`tracking-[0.1em] relative w-fit text-[16px] after:(w-[12px] h-[12px] bg-black absolute) `}
         >
           Hi There ! I'm a{" "}
           <img
-            className='ml-1 select-none inline-block -mb-1'
+            className='inline-block ml-1 -mb-1 select-none'
             alt='dot dot'
             src={require("../../Assets/Images/Intro.png")}
           ></img>
@@ -32,7 +32,7 @@ const HeroSection = (props) => {
           <br className='hidden sm:block' /> the website and start your business
           or startup today.
         </p>
-        <div className='action flex flex-wrap'>
+        <div className='flex flex-wrap action'>
           <AnchorLink
             type='button'
             href='#contact'

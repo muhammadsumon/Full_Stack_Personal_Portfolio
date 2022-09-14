@@ -46,7 +46,7 @@ const Header = () => {
       />
       <Disclosure
         as='header'
-        className='xl:container mx-auto p-4 tracking-wider flex justify-between items-center sticky top-0 z-50 bg-white'
+        className='sticky top-0 z-50 flex items-center justify-between p-4 mx-auto tracking-wider bg-white xl:container'
       >
         {({ open }) => (
           <>
@@ -59,13 +59,13 @@ const Header = () => {
             </div>
 
             {/* Desktop Menu  */}
-            <nav className='menu hidden lg:block'>
+            <nav className='hidden menu lg:block'>
               <ul className='flex gap-10'>
                 <li>
                   <AnchorLink
                     offset='96'
                     href='#heroSection'
-                    className='my-4 capitalize block py-1 ms-hightlight ms-hightlight-1'
+                    className='block py-1 my-4 capitalize ms-hightlight ms-hightlight-1'
                   >
                     Home
                   </AnchorLink>
@@ -74,14 +74,14 @@ const Header = () => {
                   <AnchorLink
                     offset='96'
                     href='#portfolio'
-                    className='my-4 capitalize block py-1'
+                    className='block py-1 my-4 capitalize'
                   >
                     Portfolio
                   </AnchorLink>
                 </li>
                 <li>
                   <a
-                    className='my-4 capitalize block py-1'
+                    className='block py-1 my-4 capitalize'
                     target='_blank'
                     href='https://dash.muhammadsumon.me'
                     rel='noreferrer'
@@ -155,8 +155,8 @@ const Header = () => {
                   </ul>
                 </div>
 
-                <div className='message p-4 px-7'>
-                  <p className='capitalize text-slate-500 text-sm'>
+                <div className='p-4 message px-7'>
+                  <p className='text-sm capitalize text-slate-500'>
                     I available for freelance project.{" "}
                   </p>
                 </div>
